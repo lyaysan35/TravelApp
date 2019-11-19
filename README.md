@@ -2,9 +2,9 @@ TRAVEL APP
 
 Summary
 
-"Your destintaion"
+"Your destination"
 
-This app is going to help people to share their travel experience on an unusual destination. These app about places which is very unique and nice but not so famous in the World.  A user will be able to see a list of cointries on main page. 
+This app is going to help people to share their travel experience on an unusual destination. These app about places which is very unique and nice but not so famous in the World.  A user will be able to see a list of countries on main page. 
  Then user can click on interesting destination, and find out more about this place, and see  picture as well
  
  
