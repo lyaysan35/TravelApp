@@ -4,17 +4,15 @@ Summary
 
 "Your destintaion"
 
-This app is going to help people to share their travel experience on an unusual destination. It is going to be 
- places which is very unique and nice but not so famous in the World.  A user will be able to list of places on main page. 
- Then user can click on interesting destination for him, and information about this palce and picture will appear on another
- page. 
+This app is going to help people to share their travel experience on an unusual destination. These app about places which is very unique and nice but not so famous in the World.  A user will be able to see a list of cointries on main page. 
+ Then user can click on interesting destination, and find out more about this place, and see  picture as well
  
  
  Models
  
  Users - username, password (id of users)
- Place - city, country,text, photo (id of place)
- Relashionships one to many (one person can create many countries)
+ Place - city, country, text, photo (id of places)
+ Relashionships: one to many (one person can create many countries)
  
  
  User Stories
