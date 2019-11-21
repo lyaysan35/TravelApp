@@ -7,7 +7,7 @@ const HeaderComponent = () => {
     <Header>
       <List>
         <List.Item>
-          <Link to="/">Home</Link>
+          <Link to="/">Your destination</Link>
         </List.Item>
         <List.Item>
           <Link to="/login">Login</Link>

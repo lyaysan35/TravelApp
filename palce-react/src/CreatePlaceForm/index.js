@@ -12,6 +12,18 @@ class CreatePlace extends Component {
       text: ''
     }
   }
+  handleSubmit = (e) =>{
+    console.log('handle submit inside create form')
+    e.preventDefault()
+    this.props.addPlace(e, this.state)
+    this.setState({
+      city: '',
+      country: '',
+      image: '',
+      text: ''
+    })
+
+  } 
   handleChange = (e) => {
     this.setState({[e.currentTarget.name]: e.currentTarget.value})
   }
@@ -19,7 +31,7 @@ class CreatePlace extends Component {
     return (
       <Segment>
         <h4>Create Place</h4>
-        <Form onSubmit={(e) => this.props.addPlace(e, this.state)}>
+        <Form onSubmit={(e) => this.handleSubmit(e)}>
           <Label>City:</Label>
           <Form.Input type='text' name='city' value={this.state.city} onChange={this.handleChange}/>
           <Label>Country:</Label>
