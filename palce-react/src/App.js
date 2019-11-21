@@ -14,9 +14,9 @@ const default404 = () => {
       <h3>You are lost.</h3>
     </div>
   )
-}
+};
 
-function App() {
+const App = () => {
   return (
     <main>
       <HeaderComponent />
