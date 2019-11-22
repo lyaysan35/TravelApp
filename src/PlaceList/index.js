@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button} from 'semantic-ui-react';
+import { Card, Button,  Image} from 'semantic-ui-react';
 function PlaceList(props){
  const places = props.places.map((place) => {
    return (
@@ -7,6 +7,8 @@ function PlaceList(props){
          <Card.Content>
            <Card.Header>{place.city}</Card.Header>
            <Card.Description>{place.country}</Card.Description>
+           <Card.Description>{place.text}</Card.Description>
+           <Image src={place.image}/>
          </Card.Content>
          <Card.Content extra>
            <Button onClick={() => props.deletePlace(place.id)}>DeletePlace</Button>
