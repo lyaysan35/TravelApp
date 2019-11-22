@@ -11,6 +11,7 @@ class PlaceContainer extends Component {
 
     this.state = {
       places: [],
+      countries: [],
       showEditModal: false,
       placeToEdit:  {
           city: '',
@@ -39,8 +40,16 @@ class PlaceContainer extends Component {
       });
       const parsedPlaces = await places.json();
       console.log(parsedPlaces);
+      let countries = parsedPlaces.data.map(place => {
+        return {
+          country: place.country,
+          city: place.city
+        }
+      });
+      console.log(countries)
       this.setState({
-        places: parsedPlaces.data //array from flask
+        places: parsedPlaces.data, //array from flask
+        countries: countries
       })
     } catch(err){
       console.log(err);
