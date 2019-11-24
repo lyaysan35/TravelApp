@@ -33,9 +33,12 @@ class Login extends Component {
     });
 
     const parsedResponse = await  loginResponse.json();
+    console.log('Logged In>>', parsedResponse);
   
     if (parsedResponse.status.code === 200) {
       console.log('Sign up successful');
+      console.log('PROPS >>', this.props);
+      this.props.onLogin(parsedResponse.data.id);
       this.props.history.push('/places'); // Change url to /places programmatically with react-router
     } else {
       // Else display error message to the user

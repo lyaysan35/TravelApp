@@ -56,6 +56,8 @@ class PlaceContainer extends Component {
     }
   }
   addPlace = async (e, placeFromForm) => {
+    placeFromForm.userId = this.props.userId;
+    console.log('placeForm >>', placeFromForm);
       e.preventDefault();
       try {
 
@@ -154,11 +156,14 @@ class PlaceContainer extends Component {
     }
   }
   render(){
+    console.log(this.state.places);
+    console.log(this.props.userId);
+    const userPlaces = this.state.places.filter(p => parseInt(p.userId) === this.props.userId);
     return (
         <Grid columns={2} divided textAlign='center' style={{ height: '100%' }} verticalAlign='top' stackable>
         <Grid.Row>
           <Grid.Column>
-            <PlaceList openEditModal={this.openEditModal} places={this.state.places} deletePlace={this.deletePlace}/>
+            <PlaceList openEditModal={this.openEditModal} places={userPlaces} userId={this.props.userId} deletePlace={this.deletePlace}/>
           </Grid.Column>
           <Grid.Column>
            <CreatePlaceForm addPlace={this.addPlace}/>

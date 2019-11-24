@@ -10,7 +10,7 @@ const HeaderComponent = () => {
           <Link to="/">Your destination</Link>
         </List.Item>
         <List.Item>
-          <Link to="/login">Login</Link>
+          Please <Link to="/login">Login</Link> or <Link to="/register">Register</Link>
         </List.Item>
         <List.Item>
           <Link to="/places">Places</Link>

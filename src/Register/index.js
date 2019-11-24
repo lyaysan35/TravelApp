@@ -46,6 +46,7 @@ class Register extends Component {
   render() {
     return (
       <Form onSubmit={this.handleSubmit}>
+        <h4>Register</h4>
         <Label>Email</Label>
         <Form.Input type="email" name="email" onChange={this.handleChange} required />
         <Label>Password</Label>

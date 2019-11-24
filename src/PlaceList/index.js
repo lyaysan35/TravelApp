@@ -1,7 +1,11 @@
 import React from 'react';
 import { Card, Button,  Image} from 'semantic-ui-react';
 function PlaceList(props){
- const places = props.places.map((place) => {
+ let locs;
+ (props.location) ? locs = props.location.state.places : locs = props.places;
+ const places = locs.map((place) => {
+  console.log('place >>', place.userId);
+  console.log('user >>', props.userId);
    return (
        <Card key={place.id}>
          <Card.Content>
@@ -10,10 +14,14 @@ function PlaceList(props){
            <Card.Description>{place.text}</Card.Description>
            <Image src={place.image}/>
          </Card.Content>
-         <Card.Content extra>
-           <Button onClick={() => props.deletePlace(place.id)}>DeletePlace</Button>
-           <Button onClick={() => props.openEditModal(place)}>Edit Place</Button>
-         </Card.Content>
+          {
+            (parseInt(place.userId) === props.userId) ?
+              <Card.Content extra>
+                <Button onClick={() => props.deletePlace(place.id)}>Delete Place</Button>
+                <Button onClick={() => props.openEditModal(place)}>Edit Place</Button>
+              </Card.Content>
+            : ""
+          }
        </Card>
        )
  })
