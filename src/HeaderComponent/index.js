@@ -1,23 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Header, List } from 'semantic-ui-react';
 
-const HeaderComponent = () => {
-  return (
-    <Header>
-      <List>
-        <List.Item>
-          <Link to="/">Your destination</Link>
-        </List.Item>
-        <List.Item>
-          Please <Link to="/login">Login</Link> or <Link to="/register">Register</Link>
-        </List.Item>
-        <List.Item>
-          <Link to="/places">Places</Link>
-        </List.Item>
-      </List>
-    </Header>
-  )
+class HeaderComponent extends Component {
+  constructor(props) {
+    super(props)
+    this.onLogout.bind(this);
+  }
+
+  async onLogout() {
+  await fetch(process.env.REACT_APP_API_URL + '/users/logout', {
+    method: 'post', body: {}}).catch(err => {
+      console.log('ERROR Logging Out >>', err);
+    });
+    this.props.onLogout();
+  }
+  render() {
+    return (
+      <Header>
+        <List>
+          <List.Item>
+            <Link to="/">Your DestinY/Ation</Link>
+          </List.Item>
+          <List.Item>
+            Please <Link to="/login">Login</Link> or <Link to="/register">Register</Link>
+          </List.Item>
+          <List.Item>
+            <button onClick={() => this.onLogout()}>Logout</button>
+          </List.Item>
+          <List.Item>
+            <Link to="/places">Your Page</Link>
+          </List.Item>
+        </List>
+      </Header>
+    )
+  }
 }
 
 // getAllCountries = async () => {

@@ -50,6 +50,7 @@ class App extends Component {
           userId: ''
         };
         this.setLoggedInUser.bind(this);
+        this.clearUserId.bind(this);
       }
 
   setCountries(countries) {
@@ -60,6 +61,11 @@ class App extends Component {
     this.setState({userId: userId});
     console.log("UserId >>", this.state.userId);
   }
+
+  clearUserId = () => {
+    this.setState({userId: ''});
+    console.log('UserId Cleared >>', this.state.userId);
+  }
   // Create a function to set country state
   // Pass setCountries to PlaceComponent as a prop 
   // In PlaceComponent call this.props.setCountries(countries)
@@ -67,7 +73,7 @@ class App extends Component {
   render() {
     return (
       <main>
-        <HeaderComponent />
+        <HeaderComponent onLogout={ this.clearUserId } />
         <Switch>
           <Route exact path="/" component={ HomeComponent } />
           <Route exact path="/login" render={(props) => <Login {...props} onLogin={ this.setLoggedInUser } /> } />

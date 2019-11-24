@@ -158,16 +158,21 @@ class PlaceContainer extends Component {
   render(){
     console.log(this.state.places);
     console.log(this.props.userId);
-    const userPlaces = this.state.places.filter(p => parseInt(p.userId) === this.props.userId);
+    let userPlaces;
+    (this.props.userId) ? userPlaces = this.state.places.filter(p => parseInt(p.userId) === this.props.userId) : userPlaces = this.state.places;
     return (
         <Grid columns={2} divided textAlign='center' style={{ height: '100%' }} verticalAlign='top' stackable>
         <Grid.Row>
           <Grid.Column>
             <PlaceList openEditModal={this.openEditModal} places={userPlaces} userId={this.props.userId} deletePlace={this.deletePlace}/>
           </Grid.Column>
-          <Grid.Column>
-           <CreatePlaceForm addPlace={this.addPlace}/>
-          </Grid.Column>
+          {
+            (this.props.userId) ?
+              <Grid.Column>
+                <CreatePlaceForm addPlace={this.addPlace}/>
+              </Grid.Column>
+            : ""
+          }
           <EditPlaceModal handleEditChange={this.handleEditChange} 
           closeAndEdit={this.closeAndEdit} placeToEdit={this.state.placeToEdit}
           open={this.state.showEditModal} />
