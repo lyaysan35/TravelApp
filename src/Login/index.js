@@ -38,6 +38,7 @@ class Login extends Component {
     if (parsedResponse.status.code === 200) {
       console.log('Sign up successful');
       console.log('PROPS >>', this.props);
+      localStorage.setItem('sessionId', parsedResponse.data.id)
       this.props.onLogin(parsedResponse.data.id);
       this.props.history.push('/places'); // Change url to /places programmatically with react-router
     } else {

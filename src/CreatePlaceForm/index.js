@@ -29,7 +29,7 @@ class CreatePlace extends Component {
   }
   render(){
     return (
-      <Segment className='createplace'>
+      <Segment className='newplace' style={{width: '80%'}} floated='right'>
         <h4>Create Place</h4>
         <Form onSubmit={(e) => this.handleSubmit(e)}>
           <Label>City:</Label>

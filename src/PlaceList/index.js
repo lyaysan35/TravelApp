@@ -7,7 +7,7 @@ function PlaceList(props){
   console.log('place >>', place.userId);
   console.log('user >>', props.userId);
    return (
-       <Card key={place.id}>
+       <Card key={place.id} style={{width: '50%'}}>
          <Card.Content>
            <Card.Header>{place.city}</Card.Header>
            <Card.Description>{place.country}</Card.Description>

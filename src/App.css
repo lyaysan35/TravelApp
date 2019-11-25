@@ -56,10 +56,11 @@ h4 {
 }
 
 .placesList a {
-  color: #240e4f;
-  font-size: 23px;
+  color: #0A2DDE;
+  font-size: 20px;
   margin-top: 40px;
   font-family: 'Rokkitt', serif;
+  font-weight: bold;
 }
 
 

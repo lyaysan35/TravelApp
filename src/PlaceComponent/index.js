@@ -161,9 +161,9 @@ class PlaceContainer extends Component {
     let userPlaces;
     (this.props.userId) ? userPlaces = this.state.places.filter(p => parseInt(p.userId) === this.props.userId) : userPlaces = this.state.places;
     return (
-      <div class="pls">
-        <Grid columns={2} divided textAlign='center' style={{ height: '100%' }} verticalAlign='top' stackable>
-        <Grid.Row>
+      <div style={{backgroundColor: '#C1F9F7', minHeight: '100vh', height: '100%'}}>
+        <Grid columns={2}  style={{ height: '100%' }} verticalAlign='top' stackable>
+        <Grid.Row style={{backgroundColor: '#C1F9F7'}}>
           <Grid.Column>
             <PlaceList openEditModal={this.openEditModal} places={userPlaces} userId={this.props.userId} deletePlace={this.deletePlace}/>
           </Grid.Column>
