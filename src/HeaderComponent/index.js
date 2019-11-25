@@ -23,7 +23,7 @@ class HeaderComponent extends Component {
             <Link to="/places">Your Page</Link>
           </List.Item>
           <List.Item>
-            <Link to="/">Your DestinY/Ation</Link>
+            <Link  className="title" to="/">Your DestinY/Ation</Link>
           </List.Item>
           {
             (this.props.userId) ?
