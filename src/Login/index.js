@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Label, Button, Message } from 'semantic-ui-react';
+import { Container, Form, Label, Button, Message } from 'semantic-ui-react';
 
 class Login extends Component {
   constructor() {
@@ -50,6 +50,7 @@ class Login extends Component {
 
   render() {
     return (
+      <Container>
       <Form onSubmit={this.handleSubmit}>
         <h4>Sign In</h4>
         <Label>Email</Label>
@@ -59,6 +60,7 @@ class Login extends Component {
         <Button type="submit" color="green">Login</Button>
         { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null }
       </Form>
+      </Container>
     )
   }
 }

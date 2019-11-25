@@ -161,6 +161,7 @@ class PlaceContainer extends Component {
     let userPlaces;
     (this.props.userId) ? userPlaces = this.state.places.filter(p => parseInt(p.userId) === this.props.userId) : userPlaces = this.state.places;
     return (
+      <div class="pls">
         <Grid columns={2} divided textAlign='center' style={{ height: '100%' }} verticalAlign='top' stackable>
         <Grid.Row>
           <Grid.Column>
@@ -178,6 +179,7 @@ class PlaceContainer extends Component {
           open={this.state.showEditModal} />
         </Grid.Row>
       </Grid>
+      </div>
       )
   }
 }

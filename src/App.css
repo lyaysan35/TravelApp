@@ -31,6 +31,29 @@
 
 }
 
+.register {
+
+}
+
+.newplace {
+ weight: 100px; 
+
+
+}
+
+/*.pls {
+  background-color: yellow;
+}*/
+
+
+h4 {
+  color: brown;
+  font-size: 18px;
+}
+
+.newplace {
+  color: yellow;
+}
 
 .placesList a {
   color: #240e4f;
