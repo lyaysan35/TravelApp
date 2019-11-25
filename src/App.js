@@ -72,7 +72,7 @@ class App extends Component {
 
   render() {
     return (
-      <main>
+      <main className="main">
         <HeaderComponent onLogout={ this.clearUserId } />
         <Switch>
           <Route exact path="/" component={ HomeComponent } />

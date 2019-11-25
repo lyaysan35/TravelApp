@@ -26,7 +26,7 @@ class HeaderComponent extends Component {
             Please <Link to="/login">Login</Link> or <Link to="/register">Register</Link>
           </List.Item>
           <List.Item>
-            <button onClick={() => this.onLogout()}>Logout</button>
+            <button  onClick={() => this.onLogout()}>Logout</button>
           </List.Item>
           <List.Item>
             <Link to="/places">Your Page</Link>
