@@ -18,19 +18,23 @@ class HeaderComponent extends Component {
   render() {
     return (
       <Header>
-        <List>
-          <List.Item>
-            <Link to="/">Your DestinY/Ation</Link>
-          </List.Item>
-          <List.Item>
-            Please <Link to="/login">Login</Link> or <Link to="/register">Register</Link>
-          </List.Item>
-          <List.Item>
-            <button  onClick={() => this.onLogout()}>Logout</button>
-          </List.Item>
+        <List className="navBar">
           <List.Item>
             <Link to="/places">Your Page</Link>
           </List.Item>
+          <List.Item>
+            <Link to="/">Your DestinY/Ation</Link>
+          </List.Item>
+          {
+            (this.props.userId) ?
+            <List.Item>
+              <a  onClick={() => this.onLogout()}>Logout</a>
+            </List.Item>
+            :
+            <List.Item>
+              <Link to="/login">Login</Link> / <Link to="/register">Register</Link>
+            </List.Item>
+          }
         </List>
       </Header>
     )

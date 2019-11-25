@@ -73,7 +73,7 @@ class App extends Component {
   render() {
     return (
       <main className="main">
-        <HeaderComponent onLogout={ this.clearUserId } />
+        <HeaderComponent userId={ this.state.userId } onLogout={ this.clearUserId } />
         <Switch>
           <Route exact path="/" component={ HomeComponent } />
           <Route exact path="/login" render={(props) => <Login {...props} onLogin={ this.setLoggedInUser } /> } />

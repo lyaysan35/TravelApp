@@ -55,7 +55,7 @@ class HomeComponent extends Component {
       }
     }}>{p.city}, {p.country} </Link></li>);
       return (
-        <div>
+        <div className="home">
           <ul>
             { domPlaces }
           </ul>

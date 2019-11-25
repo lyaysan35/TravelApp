@@ -2,7 +2,17 @@
   text-align: center;
 }
 
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .main {
+  height: 100%;
+}
+
+.home {
   background-image: url('background.jpg');
   height: 100%;
   background-position: center;
