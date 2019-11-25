@@ -8,7 +8,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 0 !important;
+  padding: 5px 0 !important;
 }
 
 .main {
@@ -26,7 +26,7 @@
 .title {
   color: #d14428;
   font-family: 'Tangerine', cursive;
-  font-size: 33px;
+  font-size: 39px;
 
 
 }
@@ -57,7 +57,7 @@ h4 {
 
 .placesList a {
   color: #0A2DDE;
-  font-size: 20px;
+  font-size: 25px;
   margin-top: 40px;
   font-family: 'Rokkitt', serif;
   font-weight: bold;
