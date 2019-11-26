@@ -77,7 +77,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={ HomeComponent } />
           <Route exact path="/login" render={(props) => <Login {...props} onLogin={ this.setLoggedInUser } /> } />
-          <Route exact path="/register" component={ Register } />
+          <Route exact path="/register" render={(props) => <Register {...props} onRegister={ this.setLoggedInUser } /> } />
           <Route exact path="/places" render={(props) => <PlaceComponent {...props} userId={ this.state.userId } /> } />
           <Route exact path="/place" render={(props) => <PlaceList {...props} userId={ this.state.userId } /> } />
           <Route component={ default404 } />
