@@ -1,3 +1,36 @@
+TRAVEL APP
+
+##Summary
+
+"Your destination"
+
+This app is going to help people to share their travel experience at an unusual destination. This app is about places which are very unique and nice but not so famous in the world. A user will be able to see a list of countries on the main page. 
+The user can then click on an interesting destination and find out more about this place, and see picture as well.
+
+
+ ##Models
+
+ Users - id, username, password
+ Place - id, city, country, text, photo, userId (user who created the place)
+ Relashionships: one-to-many (one person can create many places)
+
+
+## User Stories
+- 1) As an unauthenticated user, when I navigate to the home page, I want to be able to register for a new account or log in if I already have one.
+- 2) As an authenticated user, I should be able to create new travel destinations
+- 3) As an authenticated user, I should be able delete, update, and edit places which I have created
+- 4) As a user (authenticated or guest), I should not be able to delete, update, or edit places which I did not create.
+- 5) As a user, I want to see a list of all available places in the system on the homepage.
+- 6) As a user, when on the homepage, I want to be able to click a place on the list of places and see more information about this place.
+- 7) As a user, when I log in or create an account, I want to be redirected to a list of all the places I have created, where I should be able to edit existing places I have created, or create a brand new place.
+- 8) As an authenticated user, the new places I create should be added to the list of places on the homepage.
+
+
+## Stretch Goals
+1) Add some map which will represent places from website
+
+______________________________________________________________
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
