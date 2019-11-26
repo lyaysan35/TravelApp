@@ -18,30 +18,6 @@ const default404 = () => {
 };
 
 
-// class App extends Component {
-//   constructor(){
-//     super()
-
-//     this.state = {
-//      username: '',
-//      logged: false //is the person logged in or not
-//     }
-//   }
-//   login = (username) => {
-//     console.log(username)
-//   }
-//   render(){
-//     return(
-//       <div>
-//       {
-//        this.state.logged ? <MainContainer username={this.state.username} <Login login ={this.login}/>
-//      }
-//       </div>
-//       )
-//   }
-// }
-
-
 class App extends Component {
      constructor() {
         super()
